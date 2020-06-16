@@ -52,7 +52,7 @@
           </div>
           <div class="blog-col">
             <h3>Published (Preprint)</h3>
-            <p>June 15, 2020</p>
+            <p>June 11, 2020</p>
           </div>
         </div>
       </div>
@@ -69,9 +69,9 @@
         <h1>Takeaways</h1>
         <p>Our work culminates in three key contributions that you can takeaway for future research:</p>
         <ul>
-          <li>Hierarchical softmax is known to hurt accuracy. We thus instead develop and use a Tree Supervision Loss, showing <b>you don’t need hierarchical softmax to train a hierarchical classifier.</b></li>
-          <li>Our Induced Hierarchy, built from the weights of a pretrained neural network, outperforms existing taxonomies (i.e., WordNet) and data-based hierarchies (e.g., using information gain), showing <b>a hierarchy built in weight space is most effective.</b></li>
-          <li>The resulting Neural-Backed Decision Tree achieves accuracy within 2% of state-of-the-art neural network EfficientNet on ImageNet, simultaneously maintaining interpretable properties, showing <b>accuracy and interpretability can be jointly attained.</b></li>
+          <li>We build SegNBDT, achieving accuracy within 2% of state-of-the-art neural network HRNetV2 on Cityscapes, simultaneously maintaining interpretable properties, showing <b>accuracy and interpretability can be jointly attained <i>even for segmentation</i>.</b></li>
+          <li>We tailor popular classification saliency methods to segmentation. Then, to understand model behavior <b>leverage segmentation labels, optionally from a different dataset, to associate saliency with semantic image parts</b>.</li>
+          <li>Understanding model mistakes is challenging: Saliency maps offer no insight when a model looks at the right object. For this reason, ~80% of <b>users prefer visual, semantic decision rules to a single saliency map</b> when assessing a misclassification.</li>
         </ul>
         <div class="buttons">
           <a class="button" href="https://arxiv.org/abs/2006.06868">
