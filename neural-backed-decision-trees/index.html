@@ -1,0 +1,364 @@
+<html>
+  <head>
+    <script src="../static/script.js"></script>
+    <link href="../static/v2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="dark wrap-container">
+      <div class="wrap-wide">
+        <a class="button" href="..">
+          <i class="fas fa-arrow-left"></i>
+          <span>Back</span>
+        </a>
+      </div>
+    </header>
+    <section class="hero dark wrap-container">
+      <div class="wrap-wide">
+        <div class="card" style="background-image: url('../images/card-turqoise.svg')">
+          <img src="../images/decision-tree.svg">
+        </div>
+        <div class="hero-text">
+          <h1>Neural-Backed Decision Trees</h1>
+          <p class="small"><span>Alvin Wan, Lisa Dunlap*, Daniel Ho*, Jihan Yin, Scott Lee, Henry Jin, Suzanne Petryk, Sarah Adel Bargal, Joseph E. Gonzalez</span></p>
+          <p>Our models, termed <b>Neural-Backed Decision Trees</b>, are as accurate as state-of-the-art neural networks on image classification and as interpretable as decision trees.</p>
+          <div class="buttons">
+            <a class="button" href="https://arxiv.org/abs/2004.00221">
+              <i class="fas fa-sticky-note"></i>
+              <span>Paper</span>
+            </a>
+            <a class="button" href="https://towardsdatascience.com/what-explainable-ai-fails-to-explain-and-how-we-fix-that-1e35e37bee07?source=friends_link&sk=f7ad769e8b830ff128be4612ca2f146b">
+              <i class="fas fa-rss"></i>
+              <span>Blog</span>
+            </a>
+            <a class="button" href="https://github.com/alvinwan/neural-backed-decision-trees">
+              <i class="fas fa-code"></i>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog hero-secondary wrap-container">
+      <div class="wrap text">
+        <div class="header">
+          <h1>Try the demo</h1>
+          <a class="button" href="https://colab.research.google.com/github/alvinwan/neural-backed-decision-trees/blob/master/examples/load_pretrained_nbdts.ipynb">
+            <i class="fab fa-google"></i>
+            <span>Colab</span>
+          </a>
+        </div>
+        <p>Provide our classification model with an image of your choice, or pick one of our suggested images. Unlike a run-of-the-mill neural network, our NBDT returns sequential decisions leading up to a prediction.</p>
+        <ul class="horizontal compact">
+          <li><a href="#" class="s">Pick image</a></li>
+          <li><a href="#">Upload image</a></li>
+          <li><a href="#">Image URL</a></li>
+        </ul>
+      </div>
+      <div class="wrap-wide gallery">
+        <div class="gallery-content blog-row">
+          <a href="#zebra" id="gallery-image-zebra" onclick="setDemoExampleResponse('zebra');" class="gallery-image s">
+            <img src="https://images.pexels.com/photos/750539/pexels-photo-750539.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=135">
+          </a>
+          <a href="#dog" id="gallery-image-dog" onclick="setDemoExampleResponse('dog');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/1490908/pexels-photo-1490908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=135">
+          </a>
+          <a href="#ship" id="gallery-image-ship" onclick="setDemoExampleResponse('ship');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=135">
+          </a>
+          <a href="#bear" id="gallery-image-bear" onclick="setDemoExampleResponse('bear');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/158109/kodiak-brown-bear-adult-portrait-wildlife-158109.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150">
+          </a>
+          <a href="#airplane" id="gallery-image-airplane" onclick="setDemoExampleResponse('airplane');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150">
+          </a>
+          <a href="#cat" id="gallery-image-cat" onclick="setDemoExampleResponse('cat');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/126407/pexels-photo-126407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150">
+          </a>
+          <a href="#bus" id="gallery-image-bus" onclick="setDemoExampleResponse('bus');" class="gallery-image">
+            <img src="https://images.pexels.com/photos/385998/pexels-photo-385998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150">
+          </a>
+        </div>
+        <span class="scroll-prompt scroll-prompt-under">
+          <i class="fas fa-arrow-left"></i>
+          <i class="fas fa-mouse"></i>
+          <i class="fas fa-arrow-right"></i>
+        </span>
+      </div>
+      <div class="wrap nbdt">
+        <div class="decisions">
+          <div class="decision">
+            <h3><span>Decision 1</span></h3>
+            <p class="decision-name"><b>Animal</b></p>
+            <p><span>97.2% probability</span></p>
+          </div>
+          <div class="decision">
+            <h3><span>Decision 2</span></h3>
+            <p class="decision-name"><b>Chordate</b></p>
+            <p><span>97.2% probability</span></p>
+          </div>
+          <div class="decision">
+            <h3><span>Decision 3</span></h3>
+            <p class="decision-name"><b>Carnivore</b></p>
+            <p><span>97.2% probability</span></p>
+          </div>
+          <div class="decision">
+            <h3><span>Prediction</span></h3>
+            <p class="decision-name"><c><b>Dog</b></c></p>
+            <p><span>97.2% probability</span></p>
+          </div>
+        </div>
+        <div id="decision-rules-loading">
+          <div class="fa-2x">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
+        <div class="tree-container" id="decision-rules-results">
+          <img class="decision-tree-image" id="decision-tree-airplane" src="../images/CIFAR10-induced-ResNet18-airplane.png">
+          <img class="decision-tree-image" id="decision-tree-bird" src="../images/CIFAR10-induced-ResNet18-bird.png">
+          <img class="decision-tree-image" id="decision-tree-car" src="../images/CIFAR10-induced-ResNet18-car.png">
+          <img class="decision-tree-image" id="decision-tree-cat" src="../images/CIFAR10-induced-ResNet18-cat.png">
+          <img class="decision-tree-image" id="decision-tree-deer" src="../images/CIFAR10-induced-ResNet18-deer.png">
+          <img class="decision-tree-image" id="decision-tree-dog" src="../images/CIFAR10-induced-ResNet18-dog.png">
+          <img class="decision-tree-image" id="decision-tree-frog" src="../images/CIFAR10-induced-ResNet18-frog.png">
+          <img class="decision-tree-image" id="decision-tree-horse" src="../images/CIFAR10-induced-ResNet18-horse.png">
+          <img class="decision-tree-image" id="decision-tree-ship" src="../images/CIFAR10-induced-ResNet18-ship.png">
+          <img class="decision-tree-image" id="decision-tree-truck" src="../images/CIFAR10-induced-ResNet18-truck.png">
+        </div>
+      </div>
+    </section>
+    <section class="blog meta wrap-container">
+      <div class="wrap text">
+        <div class="blog-row">
+          <div class="blog-col">
+            <h3>Authors</h3>
+            <p>Alvin Wan, Lisa Dunlap*, Daniel Ho*, Jihan Yin, Scott Lee, Henry Jin, Suzanne Petryk,
+      Sarah Adel Bargal, Joseph E. Gonzalez</p>
+            <p><span>*denotes equal contribution</span></p>
+          </div>
+        </div>
+        <div class="blog-row">
+          <div class="blog-col">
+            <h3>Affiliations</h3>
+            <p>University of California, Berkeley</p>
+            <p>Boston University</p>
+          </div>
+          <div class="blog-col">
+            <h3>Published (Preprint)</h3>
+            <p>April 1, 2020</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog wrap-container">
+      <div class="wrap text">
+        <h1>Abstract</h1>
+        <p>Machine learning applications such as finance and medicine demand accurate and justifiable predictions, barring most deep learning methods from use. In response, previous work combines decision trees with deep learning, creating a dilemma:</p>
+        <ol>
+          <li>sacrifice interpretability to maintain accuracy OR</li>
+          <li>sacrifice accuracy to maintain interpretability.</li>
+        </ol>
+        <p>We forgo this dilemma by proposing Neural-Backed Decision Trees (NBDTs), modified hierarchical classifiers that use trees constructed in weight-space. Our NBDTs achieve (1) interpretability and (2) neural network accuracy: We preserve interpretable properties -- e.g., leaf purity and a non-ensembled model -- and demonstrate interpretability of model predictions both qualitatively and quantitatively. Furthermore, NBDTs match state-of-the-art neural networks on CIFAR10, CIFAR100, TinyImageNet, and ImageNet to within 1-2%. This yields state-of-the-art interpretable models on ImageNet, with NBDTs besting all decision-tree-based methods by ~1% to attain 75.30% top-1 accuracy. Code and pretrained NBDTs are on <a href="https://github.com/alvinwan/neural-backed-decision-trees">Github</a>.</p>
+        <h1>Takeaways</h1>
+        <p>Our work culminates in three key contributions that you can takeaway for future research:</p>
+        <ul>
+          <li>Hierarchical softmax is known to hurt accuracy. We thus instead develop and use a Tree Supervision Loss, showing <b>you don’t need hierarchical softmax to train a hierarchical classifier.</b></li>
+          <li>Our Induced Hierarchy, built from the weights of a pretrained neural network, outperforms existing taxonomies (i.e., WordNet) and data-based hierarchies (e.g., using information gain), showing <b>a hierarchy built in weight space is most effective.</b></li>
+          <li>The resulting Neural-Backed Decision Tree achieves accuracy within 2% of state-of-the-art neural network EfficientNet on ImageNet, simultaneously maintaining interpretable properties, showing <b>accuracy and interpretability can be jointly attained.</b></li>
+        </ul>
+        <div class="buttons">
+          <a class="button" href="https://arxiv.org/abs/2004.00221">
+            <i class="fas fa-sticky-note"></i>
+            <span>Paper</span>
+          </a>
+          <a class="button" href="https://towardsdatascience.com/what-explainable-ai-fails-to-explain-and-how-we-fix-that-1e35e37bee07?source=friends_link&sk=f7ad769e8b830ff128be4612ca2f146b">
+            <i class="fas fa-rss"></i>
+            <span>Blog</span>
+          </a>
+        </div>
+        <h1>Getting Started</h1>
+        <p>Installation is just one line.</p>
+        <code>pip install nbdt</code>
+        <p>Run on any <a href="https://bit.ly/3eiuCId">image</a> of your choosing.</p>
+        <code>nbdt https://bit.ly/3eiuCId</code>
+        <div class="buttons">
+          <a class="button" href="https://colab.research.google.com/github/alvinwan/neural-backed-decision-trees/blob/master/examples/load_pretrained_nbdts.ipynb">
+            <i class="fab fa-google"></i>
+            <span>Colab</span>
+          </a>
+          <a class="button" href="https://github.com/alvinwan/neural-backed-decision-trees">
+            <i class="fas fa-code"></i>
+            <span>Code</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="blog meta wrap-container">
+      <div class="wrap text">
+        <h3>Ack</h3>
+        <p>This article was made possible by input from many individuals. We sincerely thank Daniel Rothchild. His inputs, suggestions, and multiple rounds of feedback were instrumental in our paper's clarity and framing.
+          <br/><br/>
+          In addition to NSF CISE Expeditions Award CCF-1730628, UC Berkeley research is supported by gifts from Alibaba, Amazon Web Services, Ant Financial, CapitalOne, Ericsson, Facebook, Futurewei, Google, Intel, Microsoft, Nvidia, Scotiabank, Splunk and VMware. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE 1752814.</p>
+        <h3>Citation</h3>
+        <p>BibTeX citation</p>
+        <code><pre>@misc{nbdt,
+    title={NBDT: Neural-Backed Decision Trees},
+    author={Alvin Wan and Lisa Dunlap and Daniel Ho and Jihan Yin and Scott Lee and Henry Jin and Suzanne Petryk and Sarah Adel Bargal and Joseph E. Gonzalez},
+    year={2020},
+    eprint={2004.00221},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}</pre></code>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/67993e702b.js" crossorigin="anonymous"></script>
+<script>
+  var loadingEl = document.querySelector('#decision-rules-loading');
+  var resultsEl = document.querySelector('#decision-rules-results');
+  loadingEl.style.display = 'none';
+  resultsEl.style.display = 'none';
+
+  var error_message = 'Please try again later. It appears server is currently overwhelmed by a high number of requests.';
+
+  var label_to_leaf = {
+    'bear': 'dog',
+    'bus': 'truck',
+    'zebra': 'horse'
+  }
+  var decisions = {
+    'cat': [
+      {"final": {"label": "Animal", "probability": 99.47}, "others": []},
+      {"final": {"label": "Chordate", "probability": 99.20}, "others": []},
+      {"final": {"label": "Carnivore", "probability": 99.42}, "others": []},
+      {"final": {"label": "Cat", "probability": 99.86}, "others": []},
+    ],
+    'bear': [
+      {"final": {"label": "Animal", "probability": 99.46}, "others": []},
+      {"final": {"label": "Chordate", "probability": 99.82}, "others": []},
+      {"final": {"label": "Carnivore", "probability": 99.59}, "others": []},
+      {"final": {"label": "Dog", "probability": 99.67}, "others": []},
+    ],
+    'bus': [
+      {"final": {"label": "Vehicle", "probability": 97.57}, "others": []},
+      {"final": {"label": "Motor Vehicle", "probability": 99.46}, "others": []},
+      {"final": {"label": "Truck", "probability": 86.40}, "others": []},
+    ],
+    'airplane': [
+      {"final": {"label": "Vehicle", "probability": 99.21}, "others": []},
+      {"final": {"label": "Craft", "probability": 99.89}, "others": []},
+      {"final": {"label": "Airplane", "probability": 99.84}, "others": []},
+    ],
+    'dog': [
+      {"final": {"label": "Animal", "probability": 99.49}, "others": []},
+      {"final": {"label": "Chordate", "probability": 99.63}, "others": []},
+      {"final": {"label": "Carnivore", "probability": 99.40}, "others": []},
+      {"final": {"label": "Dog", "probability": 99.88}, "others": []},
+    ],
+    'ship': [
+      {"final": {"label": "Vehicle", "probability": 99.60}, "others": []},
+      {"final": {"label": "Craft", "probability": 99.62}, "others": []},
+      {"final": {"label": "Ship", "probability": 99.56}, "others": []},
+    ],
+    'zebra': [
+      {"final": {"label": "Animal", "probability": 99.31}, "others": []},
+      {"final": {"label": "Ungulate", "probability": 99.25}, "others": []},
+      {"final": {"label": "Horse", "probability": 99.62}, "others": []},
+    ],
+  }
+
+  function setDemoResponse(label, leaf, decision) {
+    loadingEl.style.display = 'none';
+    resultsEl.style.display = 'flex';
+
+    selectTree(leaf);
+    selectGalleryImage('gallery-image-' + label);
+    setDecision(leaf);
+    setDecisions(decision);
+    /* document.querySelector('.decision-note').style.display = 'block'; */
+  }
+
+  function setDemoExampleResponse(label) {
+    setDemoResponse(label, label_to_leaf[label] || label, decisions[label]);
+  }
+
+  function hideBoth() {
+    loadingEl.style.display = 'none';
+    resultsEl.style.display = 'none';
+  }
+
+  async function onImageURLSubmit(e) {
+    e.preventDefault();
+    var url = document.getElementById('field-image-url').value;
+    if (!url) {
+      alert('No image URL provided. Not sending request.');
+      return;
+    }
+
+    loadingEl.style.display = 'flex';
+    resultsEl.style.display = 'none';
+
+    var url_full = 'http://54.245.162.32:5000/?url=' + url;
+    console.log('Sending request to: ' + url_full);
+
+    fetch(url_full)
+    .then(function(response) {
+        let data;
+        if (response.ok) {
+          response.json().then(function(data) {
+              console.log(data);
+              if (!data['success']) {
+                  alert(data['message'])
+                  console.log(data);
+                  hideBoth();
+                  return;
+              }
+
+              var leaf = data['prediction']
+
+              if (leaf == 'automobile') {
+                leaf = 'car';
+              }
+
+              var decisions = data['decisions'].map(function(decision) {
+                return {
+                  'final': {
+                    'label': decision['name'],
+                    'probability': Math.round(decision['prob'] * 10000) / 100.,
+                  },
+                  'others': [],
+                };
+              });
+
+
+              setDemoResponse(leaf, leaf, decisions.slice(1));
+          }).catch(function(error) {
+              alert(error_message)
+              console.log(error);
+              hideBoth();
+          })
+        } else {
+          console.log(response);
+          alert("HTTP-Error (" + response.status + "): " + response.statusText);
+          hideBoth();
+        }
+    }).catch(function(error) {
+        alert(error_message)
+        console.log(error);
+        hideBoth();
+    });
+
+    return false;
+  }
+
+  function onFileUploadSubmit(e) {
+    e.preventDefault();
+
+    alert('Not yet supported. Please specify an image URL instead.');
+
+    return false;
+  }
+
+  setDemoExampleResponse('dog');
+</script>
+  </body>
+</html>
