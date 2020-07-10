@@ -33,10 +33,10 @@ c {
  * Links
  **/
 
-p a {
-  color:#000;
+p a, span a {
+  color:inherit;
   text-underline-position: under;
-  text-decoration-color:#000;
+  text-decoration-color:inherit;
 }
 
 /* currently buggy in chrome */
