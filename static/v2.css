@@ -56,7 +56,7 @@ article a {
 .profile {
   display:flex;
   flex-direction:row;
-  margin-top:3em;
+  margin-top:5em;
 }
 
 .profile-pic {
@@ -710,4 +710,9 @@ article h2 a {
 
 .search input::placeholder {
   color:#999;
+}
+
+h2 span.small {
+  font-size:0.5em;
+  line-height:150%;
 }
