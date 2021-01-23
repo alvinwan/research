@@ -420,6 +420,7 @@ header {
   background-color:#eee;
   display:flex;
   /* padding:4em 0; */
+  padding-bottom:6em;
   flex-direction:column;
   align-items:center;
 }
