@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>NBDT: Neural-Backed Decision Trees | Alvin Wan | Efficient Machine Learning, XAI Researcher at UC Berkeley</title>
+    <title>NBDT: Neural-Backed Decision Trees | Alvin Wan | Efficient Machine Learning Researcher at UC Berkeley</title>
     <script src="../static/script.js"></script>
     <link href="../static/v2.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
         <div class="hero-text">
           <h1>Neural-Backed Decision Trees</h1>
           <p class="small"><span>Alvin Wan, Lisa Dunlap*, Daniel Ho*, Jihan Yin, Scott Lee, Henry Jin, Suzanne Petryk, Sarah Adel Bargal, Joseph E. Gonzalez</span></p>
-          <p>Our models, termed <b>Neural-Backed Decision Trees</b>, are as accurate as state-of-the-art neural networks on image classification and as interpretable as decision trees.</p>
+          <p>Our models, termed <b>Neural-Backed Decision Trees</b>, improve both accuracy and interpretability of modern neural networks on image classification.</p>
           <div class="buttons">
             <a class="button" href="https://arxiv.org/abs/2004.00221">
               <i class="fas fa-sticky-note"></i>
@@ -154,16 +154,28 @@
     <section class="blog wrap-container">
       <div class="wrap text">
         <h1>Abstract</h1>
-        <p>Machine learning applications such as finance and medicine demand accurate and justifiable predictions, barring most deep learning methods from use. In response, previous work combines decision trees with deep learning, creating a dilemma:</p>
+        <p>
+          Machine learning applications such as finance and medicine demand accurate and justifiable predictions, 
+          barring most deep learning methods from use. In response, previous work combines decision trees with 
+          deep learning, yielding models that:</p>
         <ol>
           <li>sacrifice interpretability to maintain accuracy OR</li>
           <li>sacrifice accuracy to maintain interpretability.</li>
         </ol>
-        <p>We forgo this dilemma by proposing Neural-Backed Decision Trees (NBDTs), modified hierarchical classifiers that use trees constructed in weight-space. Our NBDTs achieve (1) interpretability and (2) neural network accuracy: We preserve interpretable properties -- e.g., leaf purity and a non-ensembled model -- and demonstrate interpretability of model predictions both qualitatively and quantitatively. Furthermore, NBDTs match state-of-the-art neural networks on CIFAR10, CIFAR100, TinyImageNet, and ImageNet to within 1-2%. This yields state-of-the-art interpretable models on ImageNet, with NBDTs besting all decision-tree-based methods by ~14% to attain 75.30% top-1 accuracy. Code and pretrained NBDTs are on <a href="https://github.com/alvinwan/neural-backed-decision-trees">Github</a>.</p>
+        <p>
+          We forgo this dilemma by proposing Neural-Backed Decision Trees (NBDTs). NBDTs replace a neural network’s
+          final linear layer with a differentiable sequence of decisions and a surrogate loss.This forces the model 
+          to learn high-level concepts and lessens reliance on highly-uncertain decisions, yielding <i>both</i>:
+        </p>
+        <ol>
+          <li><b>improved accuracy</b>:  NBDTs match or outperform modern neural networks on CIFAR, ImageNet and better generalize to unseen classes byup to 16%. Furthermore, our surrogate loss improves the original model’s accuracy by up to 2%</li>
+          <li><b>improved interpretability</b>: improving human trust by clearly identifying model mistakes and assisting in dataset debugging</li>
+        </ol>
+        <p>Code and pretrained NBDTs are on <a href="https://github.com/alvinwan/neural-backed-decision-trees">Github</a>.</p>
         <h1>Takeaways</h1>
         <p>Our work culminates in three key contributions that you can takeaway for future research:</p>
         <ul>
-          <li>Our Neural-Backed Decision Tree achieves accuracy within 2% of state-of-the-art neural network EfficientNet on ImageNet, maintaining interpretable properties, showing <b>accuracy and interpretability can be jointly attained.</b></li>
+          <li>Our Neural-Backed Decision Tree achieves accuracy competitive with then-state-of-the-art neural network EfficientNet on ImageNet, maintaining interpretable properties, showing <b>accuracy and interpretability can be jointly improved.</b></li>
           <li>Hierarchical softmax is known to hurt accuracy. We thus instead develop and use a Tree Supervision Loss, demonstrating <b>hierarchical softmax is not the only way to train a hierarchical classifier.</b></li>
           <li>Our Induced Hierarchy, built from the weights of a pretrained neural network, outperforms existing taxonomies (e.g., WordNet) and data-based hierarchies (e.g., using information gain), demonstrating <b>a hierarchy built-in weight space is most effective.</b></li>
         </ul>
