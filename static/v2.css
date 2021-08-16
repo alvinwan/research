@@ -66,9 +66,7 @@ article a {
   overflow:hidden;
 }
 .profile-pic img {
-  width:350px;
-  margin-left:-105px;
-  margin-top:-70px;
+  width:150px;
 }
 
 .profile-text {
