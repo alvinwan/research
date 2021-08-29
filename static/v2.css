@@ -102,12 +102,9 @@ h1 span {
  * Buttons
  **/
 
-.buttons {
-  margin-top:3em;
-}
-
 p.buttons {
-  margin-top:1em;
+  line-height:300%;
+  margin: 0;
 }
 
 .button {
@@ -664,7 +661,7 @@ article h2 {
 }
 
 article p {
-  line-height:150%;
+  line-height:175%;
 }
 
 article + article {
