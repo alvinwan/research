@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Alvin Wan | Efficient 4D Deep Learning Researcher at UC Berkeley</title>
+    <title>Alvin Wan | Efficient Deep Learning Researcher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="static/v2.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
           </div>
           <div class="profile-text">
             <h1>Alvin Wan<span>[at] berkeley.edu</span></h1>
-            <p>AI PhD student <span>UC Berkeley</span></p>
+            <p>Research Scientist @ <span>Apple</span></p>
             <!--<p>External Researcher <span>Facebook Reality Labs</span></p>-->
             <p class="buttons">
             <a class="button tight" href="https://alvinwan.com">
@@ -72,14 +72,15 @@
         1. <a href="?s=effml#papers">Efficient Machine Learning</a> involves manually-built neural networks, today. By contrast, our work advances neural architecture search to automatically construct more efficient neural networks, yielding new insights.<br/>
         2. <a href="?s=xai#papers">Explainable AI</a> focuses on saliency, or heatmaps of pixel importance. By contrast, we build interpretable models (with sequential decisions, like decision trees) and extend XAI beyond image classification. (<a href="https://towardsdatascience.com/what-explainable-ai-fails-to-explain-and-how-we-fix-that-1e35e37bee07">blog</a>)</span>
             </span></h2> -->
-            <h2>My research produces <b>compact</b><sup>1</sup> computer vision models for applications like <b>virtual reality</b><sup>2</sup> and <b>self-driving cars</b><sup>3</sup>.
+            <h2>My research produces <b>compact</b><sup>1</sup> computer vision models for applications like <b>virtual reality</b><sup>2</sup><sup>4</sup> and <b>self-driving cars</b><sup>3</sup>.
               <span class="small">
                 1. <a href="?s=effml#papers">Efficient Machine Learning</a> by a combination of manual design, using domain knowledge, and neural architecture search methods to produce state-of-the-art models.<br/>
                 2. <b>Facebook Reality Labs</b> research from May 2019 to March 2021, under Peizhao Zhang, Peter Vajda. <a href="?s=fbnet#papers">FBNets</a> deployed to Oculus, Portal, Instagram, and more.<br/>
-                3. <b>Tesla AutoPilot</b> research from March 2021 to July 2021, under Andrej Karpathy
+                3. <b>Tesla AutoPilot</b> research from March 2021 to July 2021, under Andrej Karpathy<br/>
+                4. <b>Apple</b> from July 2021 to present, under Qi Shan
               </span>
             </h2>
-          <p>I’m advised by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joseph E. Gonzalez</a> and participate in <a href="https://rise.cs.berkeley.edu/" rel="nofollow">RISELab</a>, <a href="https://bair.berkeley.edu/" rel="nofollow">BAIR</a>, and <a href="https://deepdrive.berkeley.edu/" rel="nofollow">Berkeley Deep Drive</a>. I received my B.S. <span>('18)</span> in EECS from UC Berkeley.</p>
+          <p>I received my B.S. <span>('18)</span> in EECS and PhD <span>('22)</span> in CS from UC Berkeley. I was advised by <a href="https://people.eecs.berkeley.edu/~jegonzal/">Joseph E. Gonzalez</a> as part of <a href="https://rise.cs.berkeley.edu/" rel="nofollow">RISELab</a>, <a href="https://bair.berkeley.edu/" rel="nofollow">BAIR</a>, and <a href="https://deepdrive.berkeley.edu/" rel="nofollow">Berkeley Deep Drive</a>.</p>
           <!-- <blockquote><b>Undergaduate?</b> Always happy to collaborate. If our work sounds interesting, please check out <a href="#">our group’s philosophy</a> before emailing.</blockquote>-->
         </div>
       </div>
@@ -132,25 +133,54 @@
           </div>
         </form>
         <article>
+          <a href="/upscale-unconstrained-channel-pruning">
+            <h2>UPSCALE: Unconstrained Channel Pruning</h2>
+            <p class="byline"><b>Alvin Wan</b><span>, Hanxiang Hao, Kaushik Patnaik, Yueyang Xu, Omer Hadad, David G&uuml;era, Zhile Ren, Qi Shan</span></p>
+          </a>
+          <p class="buttons">
+            <span class="button tight colored">ICML 2023</span>
+            <a class="button tight" href="https://arxiv.org/abs/2307.08771">Paper</a>
+            <a class="button tight" href="https://github.com/apple/ml-upscale">Code <span> &middot; 36 <i class="fa fa-star"></i></span></a>
+            <span class="tags"><a href="?s=effml#papers">#effml</a></span>
+          </p>
+        </article>
+        <article>
           <a href="https://arxiv.org/abs/2006.02049">
             <h2>Visual Transformers: Where do Transformers Really Belong in Vision Models?</h2>
             <p class="byline"><span>Bichen Wu, Chenfeng Xu, Xiaoliang Dai, </span><b>Alvin Wan</b><span>, Peizhao Zhang, Masayoshi Tomizuka, Joseph E. Gonzalez, Kurt Keutzer, Peter Vajda</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">ICCV 2021</span><a class="button tight" href="https://arxiv.org/abs/2006.03677">Paper</a><span class="tags"><a href="?s=effml#papers">#effml</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">ICCV 2021</span>
+            <a class="button tight" href="https://arxiv.org/abs/2006.03677">Paper</a>
+            <span class="tags"><a href="?s=effml#papers">#effml</a></span>
+          </p>
         </article>
         <article>
           <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Dai_FBNetV3_Joint_Architecture-Recipe_Search_Using_Predictor_Pretraining_CVPR_2021_paper.html">
             <h2>FBNetV3: Joint Architecture-Recipe Search using Neural Acquisition Function</h2>
             <p class="byline"><span>Xiaoliang Dai*, </span><b>Alvin Wan*</b><span>, Peizhao Zhang*, Bichen Wu, Zijian He, Zhen Wei, Kan Chen, Yuandong Tian, Matthew Yu, Peter Vajda, Joseph E. Gonzalez</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">CVPR 2021</span><a href="https://youtu.be/ieWHehfXZUU" class="button tight">Video</a><a class="button tight" href="https://arxiv.org/abs/2006.02049">Paper</a><span class="tags"><a href="?s=effml#papers">#effml</a> <a href="?s=fbnet#papers">#fbnet</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">CVPR 2021</span>
+            <a href="https://youtu.be/ieWHehfXZUU" class="button tight">Video</a>
+            <a class="button tight" href="https://arxiv.org/abs/2006.02049">Paper</a>
+            <span class="tags"><a href="?s=effml#papers">#effml</a> <a href="?s=fbnet#papers">#fbnet</a></span>
+          </p>
         </article>
         <article>
-          <a href="https://nbdt.aaalv.in">
+          <a href="/neural-backed-decision-trees/">
             <h2>NBDT: Neural-Backed Decision Trees</h2>
             <p class="byline"><b>Alvin Wan</b>, <span>Lisa Dunlap*, Daniel Ho*, Jihan Yin, Scott Lee, Henry Jin, Suzanne Petryk, Sarah Adel Bargal, Joseph E. Gonzalez</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">ICLR 2021</span><a href="https://youtu.be/fQ2eNFCSRiA" class="button tight">Video</a><a href="neural-backed-decision-trees" class="button tight">Webpage</a><a href="https://arxiv.org/abs/2004.00221" class="button tight">Paper</a><a href="https://github.com/alvinwan/neural-backed-decision-trees" class="button tight">Code <span> &middot; 462 <i class="fa fa-star"></i></span></a><a href="https://towardsdatascience.com/what-explainable-ai-fails-to-explain-and-how-we-fix-that-1e35e37bee07?source=friends_link&sk=f7ad769e8b830ff128be4612ca2f146b" class="button tight">Blog</a><span class="tags"><a href="?s=xai#papers">#xai</a> <a href="?s=nbdt#papers">#nbdt</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">ICLR 2021</span>
+            <a href="https://youtu.be/fQ2eNFCSRiA" class="button tight">Video</a>
+            <a href="neural-backed-decision-trees" class="button tight">Webpage</a>
+            <a href="https://arxiv.org/abs/2004.00221" class="button tight">Paper</a>
+            <a href="https://github.com/alvinwan/neural-backed-decision-trees" class="button tight">Code <span> &middot; 569 <i class="fa fa-star"></i></span></a>
+            <a href="https://towardsdatascience.com/what-explainable-ai-fails-to-explain-and-how-we-fix-that-1e35e37bee07?source=friends_link&sk=f7ad769e8b830ff128be4612ca2f146b" class="button tight">Blog</a>
+            <span class="tags"><a href="?s=xai#papers">#xai</a> <a href="?s=nbdt#papers">#nbdt</a></span>
+          </p>
         </article>
         <!-- <article>
           <a href="https://segnbdt.aaalv.in">
@@ -164,21 +194,36 @@
             <h2>FBNetV2: Differentiable Neural Architecture Search for Spatial, Channel Dimensions</h2>
             <p class="byline"><b>Alvin Wan</b>, <span>Xiaoliang Dai, Peizhao Zhang, Zijian He, Yuandong Tian, Saining Xie, Bichen Wu, Matthew Yu, Tao Xu, Kan Chen, Peter Vajda, Joseph E. Gonzalez</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">CVPR 2020</span><a href="https://youtu.be/F9YMCHdzNA0" class="button tight">Video</a><a class="button tight" href="http://openaccess.thecvf.com/content_CVPR_2020/html/Wan_FBNetV2_Differentiable_Neural_Architecture_Search_for_Spatial_and_Channel_Dimensions_CVPR_2020_paper.html">Paper</a><a class="button tight" href="https://github.com/facebookresearch/mobile-vision">Code <span> &middot; 620 <i class="fa fa-star"></i></span></a><span class="tags"><a href="#papers?s=effml">#effml</a> <a href="#papers?s=fbnet">#fbnet</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">CVPR 2020</span><a href="https://youtu.be/F9YMCHdzNA0" class="button tight">Video</a>
+            <a class="button tight" href="http://openaccess.thecvf.com/content_CVPR_2020/html/Wan_FBNetV2_Differentiable_Neural_Architecture_Search_for_Spatial_and_Channel_Dimensions_CVPR_2020_paper.html">Paper</a>
+            <a class="button tight" href="https://github.com/facebookresearch/mobile-vision">Code <span> &middot; 865 <i class="fa fa-star"></i></span></a>
+            <span class="tags"><a href="#papers?s=effml">#effml</a> <a href="#papers?s=fbnet">#fbnet</a></span>
+          </p>
         </article>
         <article>
           <a href="https://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Shift_A_Zero_CVPR_2018_paper.html">
             <h2>Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions</h2>
             <p class="byline"><span>Bichen Wu, </span><b>Alvin Wan</b><span>, Xiangyu Yue, Peter Jin, Sicheng Zhao, Noah Golmant, Amir Gholaminejad, Joseph E. Gonzalez, Kurt Keutzer</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">CVPR 2018</span><a class="button tight" href="http://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Shift_A_Zero_CVPR_2018_paper.html">Paper</a><a class="button tight" href="https://github.com/alvinwan/shiftresnet-cifar">Code <span> &middot; 116 <i class="fa fa-star"></i></span></a><span class="tags"><a href="?s=effml#papers">#effml</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">CVPR 2018</span>
+            <a class="button tight" href="http://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Shift_A_Zero_CVPR_2018_paper.html">Paper</a>
+            <a class="button tight" href="https://github.com/alvinwan/shiftresnet-cifar">Code <span> &middot; 138 <i class="fa fa-star"></i></span></a>
+            <span class="tags"><a href="?s=effml#papers">#effml</a></span>
+          </p>
         </article>
         <article>
           <a href="https://ieeexplore.ieee.org/abstract/document/8462926/">
             <h2>SqueezeSeg: Real-Time Segmentation from 3D LiDAR Point Clouds</h2>
             <p class="byline"><span>Bichen Wu, </span><b>Alvin Wan</b><span>, Xiangyu Yue, Kurt Keutzer</span></p>
           </a>
-          <p class="buttons"><span class="button tight colored">ICRA 2018</span><a class="button tight" href="https://ieeexplore.ieee.org/abstract/document/8462926/">Paper</a><a class="button tight" href="https://github.com/BichenWuUCB/SqueezeSeg">Code <span> &middot; 495 <i class="fa fa-star"></i></span></a><span class="tags"><a href="?s=effml#papers">#effml</a></span></p>
+          <p class="buttons">
+            <span class="button tight colored">ICRA 2018</span>
+            <a class="button tight" href="https://ieeexplore.ieee.org/abstract/document/8462926/">Paper</a>
+            <a class="button tight" href="https://github.com/BichenWuUCB/SqueezeSeg">Code <span> &middot; 550 <i class="fa fa-star"></i></span></a>
+            <span class="tags"><a href="?s=effml#papers">#effml</a></span>
+          </p>
         </article>
       </div>
     </section>
