@@ -107,6 +107,10 @@ p.buttons {
   margin: 0;
 }
 
+* + .buttons {
+  margin-top:2em;
+}
+
 .button {
   padding:1.1em 1.35em;
   background-color:rgba(0,0,0,0.05);
@@ -174,6 +178,10 @@ span.button.colored {
 
 .text h1,.text h2,.text p,.text li {
   color:#333;
+}
+
+.text img {
+  width:100%;
 }
 
 .text h2 {
@@ -390,6 +398,9 @@ header {
 
 .hero-text {
   flex:3;
+}
+
+.card + .hero-text {
   padding-left:7em;
 }
 

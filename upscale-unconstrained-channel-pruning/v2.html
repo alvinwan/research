@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>UPSCALE: Unconstrained Channel Pruning | Alvin Wan | Efficient Deep Learning Researcher</title>
+    <script src="../static/script.js"></script>
+    <link href="../static/v2.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="post-header">
+      <h2>UPSCALE</h2>
+      <h1>Unconstrained Channel Pruning</h1>
+      <p class="authors">Alvin Wan &middot; Hanxiang Hao &middot; Kaushik Patnaik &middot; Yueyang Xu &middot; Omer Hadad &middot; David Güera &middot; Zhile Ren &middot; Qi Shan</p>
+      <ul>
+        <li><a href="https://github.com/apple/ml-upscale">Code</a></li>
+        <li><a href="https://arxiv.org/abs/2307.08771">Paper</a></li>
+        <li><a href="https://icml.cc/virtual/2023/poster/25215">ICML</a></li>
+      </ul>
+    </div>
+    <div class="post-body">
+      <p>Improve accuracy for any channel pruning algorithm by removing constraints.</p>
+      <img src="">
+      <p>As neural networks grow in size and complexity, inference speeds decline. To combat this, one of the most effective compression techniques -- channel pruning -- removes channels from weights. However, for multi-branch segments of a model, channel removal can introduce inference-time memory copies. In turn, these copies increase inference latency -- so much so that the pruned model can be slower than the unpruned model.</p>
+      <p>As a workaround, pruners conventionally constrain certain channels to be pruned together. This fully eliminates memory copies but, as we show, significantly impairs accuracy. We now have a dilemma: Remove constraints but increase latency, or add constraints and impair accuracy.</p>
+      <p>In response, our insight is to reorder channels at export time, (1) reducing latency by reducing memory copies and (2) improving accuracy by removing constraints. Using this insight, we design a generic algorithm UPSCALE to prune models with any pruning pattern. By removing constraints from existing pruners, we improve ImageNet accuracy for post-training pruned models by 2.1 points on average -- benefiting DenseNet (+16.9), EfficientNetV2 (+7.9), and ResNet (+6.2). Furthermore, by reordering channels, UPSCALE improves inference speeds by up to 2x over a baseline export.</p>
+      <code class="citation">
+        
+      </code>
+    </div>
+  </body>
+
+  <!-- 3rd party (fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3M148NY2R"></script>
+  <script> window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-32800241-3');
+      gtag('config', 'G-R3M148NY2R');
+  </script>
+</html>
